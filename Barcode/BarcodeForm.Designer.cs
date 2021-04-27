@@ -84,12 +84,13 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(561, 406);
+            this.btnStart.Location = new System.Drawing.Point(473, 403);
             this.btnStart.Name = "btnStart";
-            this.btnStart.Size = new System.Drawing.Size(93, 32);
+            this.btnStart.Size = new System.Drawing.Size(181, 40);
             this.btnStart.TabIndex = 5;
-            this.btnStart.Text = "Начать";
+            this.btnStart.Text = "Начать сканирование";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // Barcode
             // 
@@ -105,6 +106,7 @@
             this.Name = "Barcode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Сканер штрих-кодов";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Barcode_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picboxBarcode)).EndInit();
             this.ResumeLayout(false);
